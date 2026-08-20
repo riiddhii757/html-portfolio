@@ -1,19 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title> Riddhi's Portfolio</title>
-    </head>
-    <body>
-        <h1> Riddhi Thakkars's Portfolio</h1>
-        <h2> I am Web Developer</h2>
-        <hr>
-        <h3><a href="movie-ranking.html"> Movie Ranking Project </a></h3>
-        <img src="../assets/images/movie-rankin.png">
-        <h3><a href="birthday-invite.html"> Birthday Invite project</a> </h3>
-        <img src="../assets/images/birthday-invite.png">
-        <hr>
-        <a href="about.html"> About Me</a>
-        <a href="contact.html">Contact Me</a>
-    </body>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Riddhi Thakkar — Full-Stack Developer building scalable, accessible, and modern web applications with Python, React, Node.js, and cloud technologies.">
+  <meta name="keywords" content="Riddhi Thakkar, Full-Stack Developer, Software Engineer, Python, React, Node.js, FastAPI, AWS, JavaScript, TypeScript">
+  <meta name="author" content="Riddhi Thakkar">
+  <meta name="theme-color" content="#0b1020">
+  <meta property="og:title" content="Riddhi Thakkar | Full-Stack Developer">
+  <meta property="og:description" content="Full-Stack Developer focused on building reliable, scalable, and polished digital experiences.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://riiddhii757.github.io/html-portfolio/">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Riddhi Thakkar | Full-Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background-glow glow-one" aria-hidden="true"></div>
+  <div class="background-glow glow-two" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Riddhi Thakkar home">RT<span>.</span></a>
+      <button class="mobile-menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-links">☰</button>
+      <div class="nav-links" id="nav-links">
+        <a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch theme">☀</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container reveal">
+      <div class="hero-copy">
+        <p class="eyebrow">FULL-STACK DEVELOPER</p>
+        <h1>Building thoughtful software that <span>works beautifully.</span></h1>
+        <p class="hero-text">I'm Riddhi Thakkar, a Full-Stack Developer who enjoys turning complex problems into clean, scalable, and user-focused applications.</p>
+        <div class="hero-actions"><a class="button primary" href="#contact">Let's connect <span>↗</span></a><a class="button secondary" href="#experience">View experience</a></div>
+        <div class="social-row" aria-label="Social links"><a href="https://github.com/riiddhii757" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/riddhi-thakkar-378098253" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
+      </div>
+      <div class="hero-card" aria-label="Developer profile summary">
+        <div class="code-window"><div class="window-bar"><span></span><span></span><span></span><small>riddhi.dev</small></div>
+          <pre><code><span class="code-key">const</span> developer = {
+  name: <span class="code-string">"Riddhi Thakkar"</span>,
+  role: <span class="code-string">"Full-Stack Developer"</span>,
+  languages: [
+    <span class="code-string">"Python"</span>, <span class="code-string">"TypeScript"</span>,
+    <span class="code-string">"JavaScript"</span>, <span class="code-string">"SQL"</span>
+  ],
+  focus: <span class="code-string">"Building for impact"</span>
+};</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats container reveal" aria-label="Professional highlights">
+      <div><strong>Full-Stack</strong><span>Development</span></div><div><strong>Python + JS</strong><span>Core stack</span></div><div><strong>Cloud Ready</strong><span>AWS · Docker · CI/CD</span></div><div><strong>AI Curious</strong><span>RAG · Agents · Evals</span></div>
+    </section>
+
+    <section class="section container reveal" id="about">
+      <div class="section-heading"><p class="eyebrow">01 / ABOUT</p><h2>A developer who cares about the details.</h2></div>
+      <div class="about-grid"><div><p class="large-copy">I build end-to-end web experiences across frontend, backend, data, and deployment. My approach combines practical engineering with a strong focus on maintainability, performance, accessibility, and clean user experiences.</p><p>From designing APIs and database layers to building responsive interfaces, I enjoy owning a problem from idea to production. I'm especially interested in modern web architecture and AI-powered developer experiences.</p></div>
+        <div class="principles"><div><span>01</span><h3>Build clearly</h3><p>Readable code, intentional architecture, and interfaces that make sense.</p></div><div><span>02</span><h3>Think end-to-end</h3><p>Consider the product, API, data, infrastructure, and user experience together.</p></div><div><span>03</span><h3>Keep learning</h3><p>Continuously exploring better tools, patterns, and emerging technologies.</p></div></div>
+      </div>
+    </section>
+
+    <section class="section container reveal" id="experience">
+      <div class="section-heading"><p class="eyebrow">02 / EXPERIENCE</p><h2>Experience that turns ideas into working software.</h2></div>
+      <div class="timeline">
+        <article class="timeline-item"><div class="timeline-date">FEB 2025 — AUG 2025</div><div class="timeline-content"><h3>Freelance / Contract Full-Stack Developer</h3><p class="muted">New York, NY</p><ul><li>Built and refined full-stack web applications with a focus on responsive interfaces and reliable backend services.</li><li>Worked across frontend, API, database, authentication, and deployment concerns to deliver complete features.</li><li>Applied modern development workflows using Git, APIs, cloud services, and iterative delivery.</li></ul></div></article>
+        <article class="timeline-item"><div class="timeline-date">JAN 2023 — SEP 2024</div><div class="timeline-content"><h3>IT Consultant · Synergo Group</h3><p class="muted">Toronto, ON</p><ul><li>Built full-stack applications with React, Node.js, and Express, improving client workflows by 25%.</li><li>Designed RESTful APIs with JWT/OAuth authentication supporting 100+ users.</li><li>Optimized PostgreSQL and MongoDB queries, improving application performance by 20%.</li><li>Supported AWS deployments and GitHub-based collaboration in Agile development teams.</li></ul></div></article>
+      </div>
+    </section>
+
+    <section class="section container reveal" id="skills">
+      <div class="section-heading"><p class="eyebrow">03 / SKILLS</p><h2>A versatile modern engineering toolkit.</h2></div>
+      <div class="skills-grid"><article class="skill-card"><span>01</span><h3>Languages</h3><p>Python · TypeScript · JavaScript · Java · Go · C++ · SQL · HTML · CSS</p></article><article class="skill-card"><span>02</span><h3>Frontend</h3><p>React.js · Next.js · Tailwind CSS · Material UI · Bootstrap · Responsive UI</p></article><article class="skill-card"><span>03</span><h3>Backend</h3><p>FastAPI · Node.js · Express.js · REST · GraphQL · WebSockets · Microservices</p></article><article class="skill-card"><span>04</span><h3>Data</h3><p>PostgreSQL · MongoDB · Redis · Pinecone · Weaviate · pgvector · Neo4j · Prisma</p></article><article class="skill-card"><span>05</span><h3>Cloud & DevOps</h3><p>AWS · Docker · Kubernetes · Terraform · GitHub Actions · CI/CD · Linux · OpenTelemetry</p></article><article class="skill-card"><span>06</span><h3>AI & GenAI</h3><p>OpenAI API · Claude API · LangChain · LangGraph · LlamaIndex · RAG · Embeddings · AI Evals</p></article></div>
+    </section>
+
+    <section class="section container reveal" id="projects"><div class="section-heading"><p class="eyebrow">04 / PROJECTS</p><h2>Projects are coming soon.</h2></div><div class="empty-projects"><div class="empty-icon">✦</div><h3>Something good is being built.</h3><p>This space is intentionally ready for your best projects. Add project cards, GitHub links, live demos, screenshots, and case studies whenever you're ready.</p></div></section>
+
+    <section class="section container reveal" id="contact"><div class="contact-card"><div class="contact-copy"><p class="eyebrow">05 / CONTACT</p><h2>Let's build something meaningful.</h2><p>Have a role, project, or idea worth discussing? Send a message and I'll get back to you.</p><a class="email-link" href="mailto:riddhiithakkar515@gmail.com">riddhiithakkar515@gmail.com</a></div>
+      <form id="contact-form" novalidate><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required minlength="2" placeholder="Your name"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"><label for="message">Message</label><textarea id="message" name="message" rows="5" required minlength="10" placeholder="Tell me a little about your idea..."></textarea><button class="button primary" type="submit">Send message <span>↗</span></button><p class="form-status" id="form-status" role="status" aria-live="polite"></p></form>
+    </div></section>
+  </main>
+  <footer class="footer container"><p>© <span id="year"></span> Riddhi Thakkar. Built with intention.</p><a href="#top">Back to top ↑</a></footer>
+  <script src="script.js"></script>
+</body>
 </html>
