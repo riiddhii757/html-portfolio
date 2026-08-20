@@ -1,66 +1,8 @@
-const root = document.documentElement;
-const themeToggle = document.getElementById('theme-toggle');
-const mobileMenu = document.querySelector('.mobile-menu');
-const navLinks = document.getElementById('nav-links');
-const form = document.getElementById('contact-form');
-const status = document.getElementById('form-status');
+const root=document.documentElement;const themeToggle=document.getElementById('theme-toggle');const menu=document.getElementById('menu-toggle');const nav=document.getElementById('nav-links');
 
-themeToggle.addEventListener('click', () => {
-  const light = root.dataset.theme === 'light';
-  root.dataset.theme = light ? 'dark' : 'light';
-  themeToggle.textContent = light ? '☀' : '☾';
-  themeToggle.setAttribute('aria-label', light ? 'Switch to light theme' : 'Switch to dark theme');
-  localStorage.setItem('portfolio-theme', root.dataset.theme);
-});
-
-const savedTheme = localStorage.getItem('portfolio-theme');
-if (savedTheme === 'light' || savedTheme === 'dark') {
-  root.dataset.theme = savedTheme;
-  themeToggle.textContent = savedTheme === 'light' ? '☾' : '☀';
-}
-
-mobileMenu.addEventListener('click', () => {
-  const open = navLinks.classList.toggle('open');
-  mobileMenu.setAttribute('aria-expanded', String(open));
-  mobileMenu.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
-});
-
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('open');
-    mobileMenu.setAttribute('aria-expanded', 'false');
-  });
-});
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12 });
-
-document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
-
-document.getElementById('year').textContent = new Date().getFullYear();
-
-form.addEventListener('submit', event => {
-  event.preventDefault();
-  status.textContent = '';
-
-  if (!form.checkValidity()) {
-    form.reportValidity();
-    status.textContent = 'Please complete the required fields correctly.';
-    return;
-  }
-
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const message = document.getElementById('message').value.trim();
-  const subject = encodeURIComponent(`Portfolio inquiry from ${name}`);
-  const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
-
-  status.textContent = 'Opening your email client…';
-  window.location.href = `mailto:riddhiithakkar515@gmail.com?subject=${subject}&body=${body}`;
-});
+themeToggle.addEventListener('click',()=>{const light=root.dataset.theme==='light';root.dataset.theme=light?'dark':'light';themeToggle.textContent=light?'◐':'◑';localStorage.setItem('theme',root.dataset.theme)});
+const saved=localStorage.getItem('theme');if(saved){root.dataset.theme=saved;themeToggle.textContent=saved==='light'?'◑':'◐'}
+menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',open);menu.textContent=open?'Close':'Menu'});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='Menu'}));
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+document.getElementById('year').textContent=new Date().getFullYear();
